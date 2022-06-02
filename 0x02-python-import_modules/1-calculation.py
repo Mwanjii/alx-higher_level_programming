@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-if __name__ == "__main__":  # Your code should not be executed when imported
+if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
 
     a = 10
