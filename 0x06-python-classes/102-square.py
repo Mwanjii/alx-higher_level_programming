@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" This module defines a class 'Square'. """
+
+
 class Square:
     """Represents a square.
     Private instance attribute: size:
@@ -9,39 +12,39 @@ class Square:
     """
 
     def __init__(self, size=0):
-        """Initializes the data."""
+        """ Initialize size. """
         self.__size = size
 
     def __eq__(self, other):
-        """Equal."""
+        """ Equal. """
         if hasattr(other, 'size'):
             return self.__size == other.__size
         return self.__size == other
 
     def __ne__(self, other):
-        """Not equal."""
+        """ Not equal. """
         return not self.__eq__(other)
 
     def __lt__(self, other):
-        """Less than."""
+        """ Less than. """
         if hasattr(other, 'size'):
             return self.__size < other.__size
         return self.__size < other
 
     def __le__(self, other):
-        """Less than or equal."""
+        """ Less than or equal. """
         if hasattr(other, 'size'):
             return self.__size <= other.__size
         return self.__size <= other
 
     @property
     def size(self):
-        """Retrieves the size."""
+        """ Get size. """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Sets the size to a value."""
+        """ Set the size to equal value. """
         if not isinstance(value, int) or not isinstance(value, float):
             raise TypeError("size must be a number")
         elif value < 0:
@@ -49,5 +52,5 @@ class Square:
         self.__size = value
 
     def area(self):
-        """Returns the current square area."""
+        """ Return area of the square."""
         return self.__size ** 2
